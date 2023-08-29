@@ -1,0 +1,213 @@
+//
+// LUI-3
+// (C) Jiří Bělský (github.com/wUFr)
+// MIT licenced
+//
+
+
+//
+// BUTTONS GROUP
+//
+.@{lui_class_prefix}_buttons_group when (@lui_buttons_group_class_enabled = true){
+
+	&.inline,
+	&.xs-inline {
+		& when (@lui_buttons_group_class_inline_enabled = true){
+			.lui.buttons.group.inline();
+		}
+	}
+
+	&.block,
+	&.xs-block {
+		& when (@lui_buttons_group_class_block_enabled = true){
+			.lui.buttons.group.block();
+		}
+	}
+
+	& when (@grid_sm_enable = true){
+		@media (min-width:@grid_sm_start){
+			&.sm-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.sm-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+
+	& when (@grid_md_enable = true){
+		@media (min-width:@grid_md_start){
+			&.md-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.md-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+
+	& when (@grid_lg_enable = true){
+		@media (min-width:@grid_lg_start){
+			&.lg-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.lg-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+
+	& when (@grid_xl_enable = true){
+		@media (min-width:@grid_xl_start){
+			&.xl-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.xl-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+
+	& when (@grid_xxl_enable = true){
+		@media (min-width:@grid_xxl_start){
+			&.xxl-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.xxl-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+
+	& when (@grid_xxxl_enable = true){
+		@media (min-width:@grid_xxxl_start){
+			&.xxxl-inline when (@lui_buttons_group_class_inline_enabled = true){
+				.lui.buttons.group.inline();
+			}
+
+			&.xxxl-block when (@lui_buttons_group_class_block_enabled = true){
+				.lui.buttons.group.block();
+			}
+		}
+	}
+}
+
+//
+// BUTTON DROPDOWN
+//
+.lui_button_dropdown {
+	.lui.button.dropdown.this();
+
+	& > .lui_button {
+		.lui.button.dropdown.button();
+	}
+
+	& > .window {
+		.lui.button.dropdown.window.this();
+
+		// DROPDOWN MENU
+		ul {
+			.lui.button.dropdown.window.list.this();
+
+			li {
+				.lui.button.dropdown.window.list.item();
+
+				a {
+					.lui.button.dropdown.window.list.link();
+				}
+			}
+		}
+	}
+
+	&.block > .window.opened {
+		.lui.button.dropdown.window.block-opened();
+	}
+
+	&.inline > .window.opened,
+	&.inline-block > .window.opened {
+		.lui.button.dropdown.window.inline-opened();
+	}
+
+	& when (@grid_sm_enable = true){
+		@media (min-width:@grid_sm_start){
+			&.sm-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.sm-inline > .window.opened,
+			&.sm-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+
+	& when (@grid_md_enable = true){
+		@media (min-width:@grid_md_start){
+			&.md-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.md-inline > .window.opened,
+			&.md-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+
+	& when (@grid_lg_enable = true){
+		@media (min-width:@grid_lg_start){
+			&.lg-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.lg-inline > .window.opened,
+			&.lg-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+
+	& when (@grid_xl_enable = true){
+		@media (min-width:@grid_xl_start){
+			&.xl-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.xl-inline > .window.opened,
+			&.xl-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+
+	& when (@grid_xxl_enable = true){
+		@media (min-width:@grid_xxl_start){
+			&.xxl-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.xxl-inline > .window.opened,
+			&.xxl-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+
+	& when (@grid_xxxl_enable = true){
+		@media (min-width:@grid_xxxl_start){
+			&.xxxl-block > .window.opened {
+				.lui.button.dropdown.window.block-opened();
+			}
+
+			&.xxxl-inline > .window.opened,
+			&.xxxl-inline-block > .window.opened {
+				.lui.button.dropdown.window.inline-opened();
+			}
+		}
+	}
+}

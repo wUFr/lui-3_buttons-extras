@@ -1,0 +1,13 @@
+{
+	"name": "lui-3_buttons-extras",
+	"version": "3.7.0",
+	"description": "LUI-3 framework - buttons-extras component",
+	"repository": "https://github.com/wUFr/lui-3_buttons-extras",
+	"author": "Jiří Bělský",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"lui-3_base": "~3.7.0",
+		"lui-3_buttons": "~3.7.0"
+	}
+}
